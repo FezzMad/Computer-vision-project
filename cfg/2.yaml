@@ -1,0 +1,17 @@
+# Train settings -------------------------------------------------------------------------------------------------------
+architecture: YoloNet
+data: /home/user/Desktop/my_nn/data/dataset  # path to data file, i.e.
+epochs: 300 # number of epochs to train for
+batch: 16  # number of images per batch
+imgsz: 64 # size of input images as integer or w,h
+optimizer: Adam  # optimizer to use, choices=['SGD', 'Adam', 'AdamW', 'RMSProp']
+
+amp: True  # Automatic Mixed Precision (AMP) training, choices=[True, False], True runs AMP check
+save_path: ./runs/train/
+
+# Hyperparameters ------------------------------------------------------------------------------------------------------
+lr: 0.001  # initial learning rate (i.e. SGD=1E-2, Adam=1E-3)
+momentum: 0.9  # SGD momentum/Adam beta1
+beta2: 0.999  # Adam beta2
+weight_decay: 0.0005  # optimizer weight decay 5e-4
+
